@@ -5,8 +5,10 @@ describe('Exercise', () => {
         /** Your code below */
     
         //1. Use cy.visit('/') to go to the app url
+        cy.visit('http://localhost:3000/')
+
         //2. Use cy.get('.App-link').should('be.visible') to assert valid state
-        /** Your code above */
+        cy.get('.App-link').should('be.visible')
     })
     
     it('link goes to ultimateqa', ()=> {
