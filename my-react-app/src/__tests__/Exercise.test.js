@@ -20,8 +20,11 @@ test('link opens in new tab', () => {
   /** Your code below */
 
   //1. render our App component in a virtual DOM
+  render(<App />);
   //2. get the link element
+  const linkElement = screen.getByText('Learn React')
   //3. expect `linkElement.target` toBe('_blank')
+  expect(linkElement.href).toBe('_blank');
 
   /** Your code above */
 })
